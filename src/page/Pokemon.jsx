@@ -1,5 +1,6 @@
 import './Pokemon.css';
 import { useEffect, useState } from "react";
+import NameCard from '../components/NameCard';
 
 const Pokemon = () => {
 
@@ -7,12 +8,13 @@ const Pokemon = () => {
     const POKE_API = "https://pokeapi.co/api/v2/pokemon/?limit=50"
     const [pokeList, setPokeList] = useState([]);
 
-
-
+    /* Fetch API for the list of pokemon returns pokemon name and url */
     useEffect(() => {
         fetch(POKE_API)
         .then(response => response.json())
         .then(json => setPokeList(json.results));
+
+        
     }, [])
 
 
@@ -33,9 +35,7 @@ const Pokemon = () => {
                     })
                     .map(pokemon => {
                         return (
-                            <button className='pokemon-button'>
-                                {pokemon.name.toUpperCase()}
-                            </button>
+                            <NameCard name={pokemon.name} key={crypto.randomUUID()} url={pokemon.url}/>
                         );
                     })
                 }

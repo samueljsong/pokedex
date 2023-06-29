@@ -1,0 +1,13 @@
+.pokemon-name-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.pokemon-button {
+  width: 10rem;
+  height: 5rem;
+}

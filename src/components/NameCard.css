@@ -16,9 +16,21 @@
     display: flex;
     flex-direction: column;
     margin-left: 0.5rem;
-    color: white;
   }
   .namecard-name {
     line-height: 1;
+  }
+  .type-container {
+    line-height: 0;
+    font-size: 0.8rem;
+  }
+  .grass {
+    background-color: green;
+  }
+  .fire {
+    background-color: red;
+  }
+  .water {
+    background-color: blue;
   }
 }

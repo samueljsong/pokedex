@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './NameCard.css';
 
 const NameCard = (props) => {
@@ -9,12 +9,17 @@ const NameCard = (props) => {
     const [pokeInfo, setPokeInfo] = useState({});
     const [clicked, setClicked] = useState(false);
     const [type, setType] = useState([]);
+    const [cardType, setCardType] = useState(""); 
 
-    useEffect(() => {
-        fetch(props.url)
+    const getType = async () => {
+        await fetch(props.url)
         .then(response => response.json())
         .then(json => setType(json.types))
-        
+        setCardType(type[0].type.name)
+    }
+
+    useEffect(() => {
+        getType()
     }, [])
 
     /**
@@ -28,6 +33,8 @@ const NameCard = (props) => {
     }
 
 
+    const cardStyle = `namecard-container ${cardType}`
+
     /**
      * This is the url for the pokemons png image.
      */
@@ -35,16 +42,18 @@ const NameCard = (props) => {
 
 
     return(
-        <div className='namecard-container' onClick={onClickHandler} style={{background: "grey"}}>
+        <div className={cardStyle} onClick={onClickHandler} >
             <div className='namecard-information'>
                 <h4 className='namecard-name'>
                     {props.name.charAt(0).toUpperCase() + props.name.slice(1)}
                 </h4>
-                {
-                    type.map(slot => {
-                        return <h4 key={crypto.randomUUID()}>{slot.type.name}</h4>
-                    })
-                }
+                <div className='type-container'>
+                    {
+                        type.map(slot => {
+                            return <h4 key={crypto.randomUUID()}>{slot.type.name}</h4>
+                        })
+                    }
+                </div>
             </div>
 
             {

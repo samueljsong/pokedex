@@ -9,11 +9,16 @@ const Pokemon = () => {
     const [pokeList, setPokeList] = useState([]);
     const [type, setType] = useState([]);
 
-    /* Fetch API for the list of pokemon returns pokemon name and url */
-    useEffect(() => {
+
+    const fetchPokeList = () => {
         fetch(POKE_API)
         .then(response => response.json())
         .then(json => setPokeList(json.results))
+    }
+
+    /* Fetch API for the list of pokemon returns pokemon name and url */
+    useEffect(() => {
+        fetchPokeList();
     }, [])
 
     const onInputHandler = (e) => {

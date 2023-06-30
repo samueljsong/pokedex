@@ -5,7 +5,7 @@ import NameCard from '../components/NameCard';
 const Pokemon = () => {
 
     const [search, setSearch] = useState("");
-    const POKE_API = "https://pokeapi.co/api/v2/pokemon/?limit=50"
+    const POKE_API = "https://pokeapi.co/api/v2/pokemon/?limit=151"
     const [pokeList, setPokeList] = useState([]);
 
     /* Fetch API for the list of pokemon returns pokemon name and url */
@@ -23,9 +23,9 @@ const Pokemon = () => {
     }
 
     return (
-        <div>
-            <input type="text" onChange={onInputHandler}/>
-            <h1>{search}</h1>
+        <div className='pokemon-container'>
+            <h1 className='title'>Pocket Dex</h1>
+            <input type="text" onChange={onInputHandler} className='searchbar'/>
             <div className='pokemon-name-container'>
                 {
                     pokeList.filter(pokemon => {
@@ -35,7 +35,11 @@ const Pokemon = () => {
                     })
                     .map(pokemon => {
                         return (
-                            <NameCard name={pokemon.name} key={crypto.randomUUID()} url={pokemon.url}/>
+                            <NameCard 
+                                name={pokemon.name} 
+                                key={crypto.randomUUID()} 
+                                url={pokemon.url} id={pokemon.url.slice(34, pokemon.url.length-1)} 
+                            />
                         );
                     })
                 }

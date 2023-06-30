@@ -21,16 +21,22 @@ const NameCard = (props) => {
         setClicked(!clicked)
     }
 
+    /**
+     * This is the url for the pokemons png image.
+     */
+    let imageURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${props.id}.png`
+
 
     return(
-        <button className='namecard-container' onClick={onClickHandler}>
+        <div className='namecard-container' onClick={onClickHandler} style={{background: "grey"}}>
             {props.name}
             {
                 <p>
                     {clicked ? JSON.stringify(pokeInfo.abilities) : null}
                 </p>
             }
-        </button>
+            <img className="pokemon-image" src={imageURL} alt="" />
+        </div>
     );
 }
 

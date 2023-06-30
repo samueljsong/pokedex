@@ -1,13 +1,23 @@
-.pokemon-name-container {
-  width: 90%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.pokemon-button {
-  width: 10rem;
-  height: 5rem;
+@media only screen and (max-width: 480px) {
+  .pokemon-container {
+    /* background-color: aliceblue; */
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 5rem 4rem auto;
+    grid-gap: 1rem;
+  }
+  .title {
+    grid-row-start: 1;
+  }
+  .searchbar {
+    grid-row-start: 2;
+  }
+  .pokemon-name-container {
+    grid-row-start: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 1rem;
+  }
 }

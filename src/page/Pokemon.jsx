@@ -5,18 +5,16 @@ import NameCard from '../components/NameCard';
 const Pokemon = () => {
 
     const [search, setSearch] = useState("");
-    const POKE_API = "https://pokeapi.co/api/v2/pokemon/?limit=151"
+    const POKE_API = "https://pokeapi.co/api/v2/pokemon/?limit=10"
     const [pokeList, setPokeList] = useState([]);
+    const [type, setType] = useState([]);
 
     /* Fetch API for the list of pokemon returns pokemon name and url */
     useEffect(() => {
         fetch(POKE_API)
         .then(response => response.json())
-        .then(json => setPokeList(json.results));
-
-        
+        .then(json => setPokeList(json.results))
     }, [])
-
 
     const onInputHandler = (e) => {
         setSearch(e.target.value);
@@ -38,7 +36,7 @@ const Pokemon = () => {
                             <NameCard 
                                 name={pokemon.name} 
                                 key={crypto.randomUUID()} 
-                                url={pokemon.url} id={pokemon.url.slice(34, pokemon.url.length-1)} 
+                                url={pokemon.url} id={pokemon.url.slice(34, pokemon.url.length-1)}
                             />
                         );
                     })

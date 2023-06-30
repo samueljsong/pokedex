@@ -1,9 +1,24 @@
 @media only screen and (max-width: 480px) {
   .namecard-container {
-    height: 5rem;
-    width: 10rem;
+    height: 7rem;
+    width: 11rem;
+    display: grid;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.7)
   }
   .pokemon-image {
     width: 5rem;
+    position: absolute;
+    justify-self: end;
+    padding-top: 1.7rem;
+  }
+  .namecard-information {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    color: white;
+  }
+  .namecard-name {
+    line-height: 1;
   }
 }

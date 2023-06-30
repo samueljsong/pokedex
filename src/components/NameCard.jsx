@@ -6,16 +6,15 @@ const NameCard = (props) => {
     /**
      * Information of the individual pokemon.
      */
-    const [pokeInfo, setPokeInfo] = useState({});
-    const [clicked, setClicked] = useState(false);
-    const [type, setType] = useState([]);
+   
+    const [type, setType] = useState([]);           // Need to fix card background color rendering
     const [cardType, setCardType] = useState(""); 
 
     const getType = async () => {
         await fetch(props.url)
         .then(response => response.json())
         .then(json => setType(json.types))
-        setCardType(type[0].type.name)
+        // setCardType(type[0].type.name)
     }
 
     useEffect(() => {
@@ -26,10 +25,8 @@ const NameCard = (props) => {
      * sets clicked
      */
     const onClickHandler = () => {
-        fetch(props.url)
-        .then(response => response.json())
-        .then(json => setPokeInfo(json))
-        setClicked(!clicked)
+        props.liftState(props.url)
+        props.openPokemonInfo();
     }
 
 
@@ -56,11 +53,6 @@ const NameCard = (props) => {
                 </div>
             </div>
 
-            {
-                <p>
-                    {clicked ? JSON.stringify(pokeInfo.abilities) : null}
-                </p>
-            }
             <img className="pokemon-image" src={imageURL} alt="" />
         </div>
     );

@@ -1,13 +1,15 @@
 
 import './App.css'
-import Pokemon from './page/Pokemon'
+import Pokedex from './page/Pokedex'
+
 
 function App() {
-  
 
   return (
     <div className='container'>
-      <Pokemon></Pokemon>
+      {
+        <Pokedex/>
+      }
     </div>
   )
 }

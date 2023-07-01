@@ -7,19 +7,27 @@ const NameCard = (props) => {
      * Information of the individual pokemon.
      */
    
-    const [type, setType] = useState([]);           // Need to fix card background color rendering
+    const [types, setType] = useState([]);           // Need to fix card background color rendering
     const [cardType, setCardType] = useState(""); 
+    const [mainType, setMainType] = useState("");
 
-    const getType = async () => {
-        await fetch(props.url)
-        .then(response => response.json())
-        .then(json => setType(json.types))
-        // setCardType(type[0].type.name)
-    }
 
     useEffect(() => {
-        getType()
+        const getType = async () => {
+            await fetch(props.url)
+            .then(response => response.json())
+            .then(json => setType(json.types))
+        }
+        getType();
     }, [])
+
+    useEffect(() => {
+        if (types.length === 0){
+            return;
+        }else{
+            setMainType(types[0].type.name);
+        }
+    }, [types])
 
     /**
      * sets clicked
@@ -30,7 +38,7 @@ const NameCard = (props) => {
     }
 
 
-    const cardStyle = `namecard-container ${cardType}`
+    const cardStyle = `namecard-container ${mainType}`
 
     /**
      * This is the url for the pokemons png image.
@@ -46,7 +54,7 @@ const NameCard = (props) => {
                 </h4>
                 <div className='type-container'>
                     {
-                        type.map(slot => {
+                        types.map(slot => {
                             return <img className="type-img" key={crypto.randomUUID()} src={`/${slot.type.name}.png`}></img>
                         })
                     }
@@ -59,6 +67,3 @@ const NameCard = (props) => {
 }
 
 export default NameCard
-
-
-//<h4 key={crypto.randomUUID()}>{slot.type.name}</h4>

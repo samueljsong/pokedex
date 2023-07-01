@@ -17,6 +17,8 @@ const Pokemon = (props) => {
         .then(json => setPokeList(json.results))
     }
 
+   
+
     /* Fetch API for the list of pokemon returns pokemon name and url */
     useEffect(() => {
         fetchPokeList();

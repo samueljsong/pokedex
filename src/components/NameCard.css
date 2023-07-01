@@ -41,12 +41,57 @@
     position: absolute;
   }
   .grass {
-    background-color: green;
+    background-color: #77dd77;
   }
   .fire {
-    background-color: red;
+    background-color: #FAA0A0;
   }
   .water {
-    background-color: blue;
+    background-color: #95bce7;
+  }
+  .bug{
+    background-color: #789860;
+  }
+  .dark{
+    background-color: #1c1c1c;
+  }
+  .dragon{
+    background-color: #6C8DFA;
+  }
+  .electric{
+    background-color: #FDFD95;
+  }
+  .fairy{
+    background-color: #FFD1DC;
+  }
+  .fighting{
+    background-color: #e06969;
+  }
+  .flying{
+    background-color: #e8e8e8;
+  }
+  .ghost{
+    background-color: #595f8d;
+  }
+  .ground{
+    background-color: #FF964F;
+  }
+  .ice{
+    background-color: #E7FFFF;
+  }
+  .normal{
+    background-color: #DDDDD2;
+  }
+  .poison{
+    background-color: #B19CD9;
+  }
+  .psychic{
+    background-color: #FFB3C6;
+  }
+  .rock{
+    background-color: #D1C3B7;
+  }
+  .steel{
+
   }
 }

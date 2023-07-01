@@ -16,7 +16,7 @@ const Type = (props) => {
         <>
             {
                 types.map(slot => {
-                    return <img className="type-img" src={`/${slot.type.name}.png`} alt="" />
+                    return <img className="type-img" key={crypto.randomUUID()} src={`/${slot.type.name}.png`} alt="" />
                 })
             }
         </>

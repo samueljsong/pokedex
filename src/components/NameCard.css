@@ -1,3 +1,8 @@
+@font-face {
+  font-family: pokemon;
+  src: url(../../public/PokemonGb-RAeo.ttf);
+}
+
 @media only screen and (max-width: 480px) {
   .namecard-container {
     height: 7rem;
@@ -11,20 +16,29 @@
     position: absolute;
     justify-self: end;
     padding-top: 1.7rem;
+    margin-right: 0.5rem;
   }
   .namecard-information {
     display: flex;
     flex-direction: column;
-    margin-left: 0.5rem;
+
   }
   .namecard-name {
     line-height: 1;
+    /* font-family: pokemon; */
+    z-index: 6;
+    text-align: center;
+    margin-top: 0.7rem;
+    text-wrap: balance;
   }
   .type-container {
+    margin-top: 4rem;
+    margin-left: 1rem;
     line-height: 0;
     font-size: 0.8rem;
     display: flex;
     gap: 0.2rem;
+    position: absolute;
   }
   .grass {
     background-color: green;

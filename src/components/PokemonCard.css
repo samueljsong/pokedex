@@ -17,7 +17,7 @@
         height: 90vh;
         width: 100%;
         grid-template-rows: 10% 25% 65%;
-        background-color: aqua;
+        background-color: #505155;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.7);
         border-radius: 20px 20px 20px 20px ;
     }    

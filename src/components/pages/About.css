@@ -1,0 +1,8 @@
+.about-container{
+    color: black;
+}
+
+.about{
+    display: flex;
+    gap: 2rem;
+}

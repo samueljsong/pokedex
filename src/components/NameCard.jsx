@@ -47,7 +47,7 @@ const NameCard = (props) => {
                 <div className='type-container'>
                     {
                         type.map(slot => {
-                            return <h4 key={crypto.randomUUID()}>{slot.type.name}</h4>
+                            return <img className="type-img" key={crypto.randomUUID()} src={`/${slot.type.name}.png`}></img>
                         })
                     }
                 </div>
@@ -59,3 +59,6 @@ const NameCard = (props) => {
 }
 
 export default NameCard
+
+
+//<h4 key={crypto.randomUUID()}>{slot.type.name}</h4>

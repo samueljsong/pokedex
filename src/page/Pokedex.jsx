@@ -37,7 +37,10 @@ const Pokemon = (props) => {
 
     return (
         <div className='pokemon-container'>
-            <h1 className='title'>Pocket Dex</h1>
+            {
+                toggle ? "" : <h1 className='title'>Pocket Dex</h1>
+            }
+            
             {
                 toggle? "" : <input type="text" onChange={onInputHandler} className='searchbar'/>
             }

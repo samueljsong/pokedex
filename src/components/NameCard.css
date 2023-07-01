@@ -23,6 +23,8 @@
   .type-container {
     line-height: 0;
     font-size: 0.8rem;
+    display: flex;
+    gap: 0.2rem;
   }
   .grass {
     background-color: green;

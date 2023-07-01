@@ -5,8 +5,8 @@
 
 @media only screen and (max-width: 480px) {
   .namecard-container {
-    height: 7rem;
-    width: 11rem;
+    height: 6.5rem;
+    width: 10rem;
     display: grid;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.7);
@@ -17,15 +17,15 @@
     position: absolute;
     justify-self: end;
     padding-top: 1.7rem;
-    margin-right: 0.5rem;
+    margin-right: 0rem;
     z-index: 3;
   }
 
   .pokeball-image{
-    width: 5rem;
+    width: 4rem;
     position: absolute;
     margin-left: 5.5rem;
-    margin-top: 1.7rem;
+    margin-top: 2.1rem;
 
   }
   .namecard-information {
@@ -43,7 +43,7 @@
   }
   .type-container {
     margin-top: 4rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     line-height: 0;
     font-size: 0.8rem;
     display: flex;

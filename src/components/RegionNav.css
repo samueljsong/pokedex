@@ -1,0 +1,11 @@
+.logo{
+    width: 3rem;
+}
+
+.regionnav-container{
+    display: grid;
+    height: 3.5rem;
+    border-bottom: solid 1px rgb(206, 202, 202);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

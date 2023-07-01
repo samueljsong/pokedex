@@ -9,7 +9,8 @@
     width: 11rem;
     display: grid;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.7)
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.7);
+    border: solid 1px white;
   }
   .pokemon-image {
     width: 5rem;
@@ -17,6 +18,15 @@
     justify-self: end;
     padding-top: 1.7rem;
     margin-right: 0.5rem;
+    z-index: 3;
+  }
+
+  .pokeball-image{
+    width: 5rem;
+    position: absolute;
+    margin-left: 5.5rem;
+    margin-top: 1.7rem;
+
   }
   .namecard-information {
     display: flex;
@@ -41,57 +51,73 @@
     position: absolute;
   }
   .grass {
-    background-color: #77dd77;
+    background-image: linear-gradient(#65bd65, white);
   }
   .fire {
-    background-color: #FAA0A0;
+    background-image: linear-gradient(#e46060, white);
   }
   .water {
-    background-color: #95bce7;
+    background-image: linear-gradient(#6aa3e0, white);
+
   }
   .bug{
-    background-color: #789860;
+    background-image: linear-gradient(#6a9946, white);
+  
   }
   .dark{
-    background-color: #1c1c1c;
+    background-image: linear-gradient(#1c1c1c, white);
+   
   }
   .dragon{
-    background-color: #6C8DFA;
+    background-image: linear-gradient(#6C8DFA, white);
+ 
   }
   .electric{
-    background-color: #FDFD95;
+    background-image: linear-gradient(#dada44, white);
+
   }
   .fairy{
-    background-color: #FFD1DC;
+    background-image: linear-gradient(#dfa2b0, white);
+
   }
   .fighting{
-    background-color: #e06969;
+    background-image: linear-gradient(#e06969, white);
+
   }
   .flying{
-    background-color: #e8e8e8;
+    background-image: linear-gradient(#e8e8e8, white);
+
   }
   .ghost{
-    background-color: #595f8d;
+    background-image: linear-gradient(#595f8d, white);
+
   }
   .ground{
-    background-color: #FF964F;
+    background-image: linear-gradient(#FF964F, white);
+
   }
   .ice{
-    background-color: #E7FFFF;
+    background-image: linear-gradient(#61d8d8, white);
+
   }
   .normal{
-    background-color: #DDDDD2;
+    background-image: linear-gradient(#929289, white);
+
   }
   .poison{
-    background-color: #B19CD9;
+    background-image: linear-gradient(#9f81d6, white);
+
   }
   .psychic{
-    background-color: #FFB3C6;
+    background-image: linear-gradient(#FFB3C6, white);
+
   }
   .rock{
-    background-color: #D1C3B7;
+    background-image: linear-gradient(#c7ac95, white);
+
   }
   .steel{
+    background-image: linear-gradient(#77dd77, white);
 
   }
 }

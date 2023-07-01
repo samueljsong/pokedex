@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import './NameCard.css';
+import pokeball from '../../public/pokeball.png'
 
 const NameCard = (props) => {
 
@@ -62,6 +63,7 @@ const NameCard = (props) => {
             </div>
 
             <img className="pokemon-image" src={imageURL} alt="" />
+            <img className="pokeball-image" src={pokeball} alt="" />
         </div>
     );
 }

@@ -15,17 +15,18 @@ const About =(props) => {
 
     return (
         <div className='about-container'>
-            
-                <p>Height:</p>
-                <p>{height}</p>
-           
-            
-                <p>Weight:</p>
-                <p>{weight}</p>
-            
-            
-                <p>Abilities:</p>
-                <p>{abilitiesString}</p>
+
+                <div className='about-subsection'>
+                    <p>Height:</p>
+                    <p>Weight:</p>
+                    <p>Abilities:</p>
+                </div>
+
+                <div className='about-details'>
+                    <p>{height}</p>
+                    <p>{weight}</p>
+                    <p>{abilitiesString}</p>
+                </div>
             
         </div>
     )

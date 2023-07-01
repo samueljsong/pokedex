@@ -2,22 +2,25 @@ import './Pokedex.css';
 import { useEffect, useState } from "react";
 import NameCard from '../components/NameCard';
 import PokemonCard from '../components/PokemonCard';
+import RegionNav from '../components/RegionNav';
 
 const Pokemon = (props) => {
 
-    const [search, setSearch] = useState("");
-    const POKE_API = "https://pokeapi.co/api/v2/pokemon/?limit=151"
-    const [pokeList, setPokeList] = useState([]);
-    const [toggle, setToggle] = useState(false);
-    const [url, setUrl] = useState("");
+    const [search, setSearch] = useState("");           //State for search bar.
+    const [pokeList, setPokeList] = useState([]);       //State for the list of pokemon.
+    const [toggle, setToggle] = useState(false);        //State for click on name card.
+    const [url, setUrl] = useState("");                 //State for storing pokemon fetch url.
 
-    const fetchPokeList = () => {
+    const POKE_API = "https://pokeapi.co/api/v2/pokemon/?limit=151"     //API url.
+
+    /**
+     * Initial API fetch from POKE_API.
+     */
+    const fetchPokeList = () => {   
         fetch(POKE_API)
         .then(response => response.json())
         .then(json => setPokeList(json.results))
     }
-
-   
 
     /* Fetch API for the list of pokemon returns pokemon name and url */
     useEffect(() => {
@@ -35,16 +38,17 @@ const Pokemon = (props) => {
     // lifting up state
     const onOpenPokemonHandler = (url) => {
         setUrl(url)
+        setSearch("")
     }
 
     return (
         <div className='pokemon-container'>
             {
-                toggle ? "" : <h1 className='title'>Pocket Dex</h1>
+                toggle ? "" : <RegionNav/>
             }
             
             {
-                toggle? "" : <input type="text" onChange={onInputHandler} className='searchbar'/>
+                toggle? "" : <input type="text" onChange={onInputHandler} className='searchbar' placeholder='Search Pokemon'/>
             }
                 
             {

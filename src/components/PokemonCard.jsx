@@ -12,10 +12,10 @@ import Moves from './pages/Moves';
 const PokemonCard = (props) => {
 
     const [pokemonInfo, setPokemonInfo] = useState({});
-    // const [about, setAbout] = useState(true);
-    // const [base, setBase] = useState(false);
-    // const [evolution, setevolution] = useState(false);
-    // const [moves, setMoves] = useState(false);
+    const [about, setAbout] = useState(true);
+    const [base, setBase] = useState(false);
+    const [evolution, setevolution] = useState(false);
+    const [moves, setMoves] = useState(false);
 
 
     let component

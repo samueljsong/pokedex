@@ -34,7 +34,7 @@ const NameCard = (props) => {
      * sets clicked
      */
     const onClickHandler = () => {
-        props.liftState(props.url)
+        props.liftState(props.url, props.id, mainType)
         props.openPokemonInfo();
     }
 

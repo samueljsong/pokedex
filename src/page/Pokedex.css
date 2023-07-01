@@ -10,10 +10,16 @@
   .title {
     grid-row-start: 1;
   }
+
+  .search-container{
+    width: 100%;
+    display: relative;
+  }
   .searchbar {
     grid-row-start: 2;
     border-radius: 50px;
     height: 2.5rem;
+    width: 83%;
     border: solid 1px rgb(206, 202, 202);
     margin-left: 1rem;
     margin-right: 1rem;
@@ -22,6 +28,7 @@
     font-weight: 600;
     background-color: #2e2e2e;
     color: white;
+    display: block;
   }
   .pokemon-name-container {
     grid-row-start: 3;
@@ -30,6 +37,8 @@
     justify-content: space-around;
     row-gap: 1rem;
   }
+
+
 
 
 

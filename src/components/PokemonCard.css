@@ -53,4 +53,61 @@
         height: 100%;
         grid-template-rows: 15% 85%;
     }
+
+
+    /*Color for types*/
+    .grass-pc {
+        background-image: linear-gradient(#65bd65 0%, 30%, white 90%);
+    }
+    .fire-pc {
+        background-image: linear-gradient(#e46060 0%, 30%, white);
+    }
+    .water-pc {
+        background-image: linear-gradient(#5597df 0%, 30%, white);
+    }
+    .bug-pc{
+        background-image: linear-gradient(#6a9946 0%, 30%, white);
+    }
+    .dark-pc{
+        background-image: linear-gradient(#1c1c1c 0%, 30%, white);
+    }
+    .dragon-pc{
+        background-image: linear-gradient(#6C8DFA 0%, 30%, white);
+    }
+    .electric-pc{
+        background-image: linear-gradient(#dada44 0%, 30%, white);
+    }
+    .fairy-pc{
+        background-image: linear-gradient(#dfa2b0 0%, 30%, white);
+    }
+    .fighting-pc{
+        background-image: linear-gradient(#e06969 0%, 30%, white);
+    }
+    .flying-pc{
+        background-image: linear-gradient(#e8e8e8 0%, 30%, white);
+    }
+    .ghost-pc{
+        background-image: linear-gradient(#595f8d 0%, 30%, white);
+    }
+    .ground-pc{
+        background-image: linear-gradient(#FF964F 0%, 30%, white);
+    }
+    .ice-pc{
+        background-image: linear-gradient(#61d8d8 0%, 30%, white);
+    }
+    .normal-pc{
+        background-image: linear-gradient(#929289 0%, 30%, white);
+    }
+    .poison-pc{
+        background-image: linear-gradient(#9f81d6 0%, 30%, white);
+    }
+    .psychic-pc{
+        background-image: linear-gradient(#FFB3C6 0%, 30%, white);
+    }
+    .rock-pc{
+        background-image: linear-gradient(#c7ac95 0%, 30%, white);
+    }
+    .steel-pc{
+        background-image: linear-gradient(#77dd77 0%, 30%, white);
+    }
 }

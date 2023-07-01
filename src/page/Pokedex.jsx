@@ -10,6 +10,11 @@ const Pokemon = (props) => {
     const [pokeList, setPokeList] = useState([]);       //State for the list of pokemon.
     const [toggle, setToggle] = useState(false);        //State for click on name card.
     const [url, setUrl] = useState("");                 //State for storing pokemon fetch url.
+    
+    /* States for Pokemon Card Component */
+    const [selectedPokemonID, setSelectedPokemonID] = useState("");
+    const [selectedPokemonType, setSelectedPokemonType] = useState("")
+
 
     const POKE_API = "https://pokeapi.co/api/v2/pokemon/?limit=151"     //API url.
 
@@ -32,14 +37,21 @@ const Pokemon = (props) => {
     }
 
     const onToggleHandler = () => {
-        setToggle(!toggle);
+        setToggle(!toggle);                             //Turns on the flag to render pokemon card
     }
 
-    // lifting up state
-    const onOpenPokemonHandler = (url) => {
-        setUrl(url)
-        setSearch("")
+    /**
+     * Callback function to lift up the state and set the url to state.
+     * @param {A String} url 
+     */
+    const onOpenPokemonHandler = (url, id, type) => {
+        setUrl(url);
+        setSelectedPokemonID(id);
+        setSelectedPokemonType(type);
+        setSearch("");                                   //Resets the search state to nothing.
     }
+
+    
 
     return (
         <div className='pokemon-container'>
@@ -48,13 +60,20 @@ const Pokemon = (props) => {
             }
             
             {
-                toggle? "" : <input type="text" onChange={onInputHandler} className='searchbar' placeholder='Search Pokemon'/>
+                toggle? "" : 
+                <div className='search-container'>
+                    <input type="text" onChange={onInputHandler} className='searchbar' placeholder={`Search Pokemon`}/>
+                    {/* <img src={searchImage} className='search-image' alt="" /> */}
+                </div>
+                
             }
                 
             {
                 toggle? <PokemonCard 
                             closePokemonInfo = {onToggleHandler}
                             url = {url}
+                            id = {selectedPokemonID}
+                            type = {selectedPokemonType}
                         /> 
 
                 : <div className='pokemon-name-container'>

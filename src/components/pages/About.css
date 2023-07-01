@@ -7,6 +7,7 @@
     display: grid;
     width: 100%;
     grid-template-columns: 30% 70%;
+    grid-template-rows: 70% 30%;
     height: 100%;
     color: black;
     font-size: 0.75rem;
@@ -34,4 +35,25 @@
     gap: 0.5rem;
     font-size: 0.8rem;
     font-weight: 700;
+    margin-left: 1rem;
+}
+
+.about-breeding-title{
+    display: flex;
+    place-items: center;
+    margin-left: 1.5rem;
+}
+
+.about-breeding-details{
+    display: flex;
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    z-index: 50;
+    gap: 1rem;
+    place-items: center;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
 }

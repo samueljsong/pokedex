@@ -12,6 +12,9 @@ import Moves from './pages/Moves';
 const PokemonCard = (props) => {
 
     const [pokemonInfo, setPokemonInfo] = useState({});
+    const [speciesInfo, setSpeciesInfo] = useState({});
+
+    /* State for navigation */
     const [about, setAbout] = useState(true);
     const [base, setBase] = useState(false);
     const [evolution, setevolution] = useState(false);
@@ -23,7 +26,7 @@ const PokemonCard = (props) => {
         case "/":
             break;
         case "/about":
-            component = <About info={pokemonInfo}/>
+            component = <About info={pokemonInfo} speciesInfo={speciesInfo} id={props.id}/>
             break;
         case "/basestat":
             component = <BaseStat/>
@@ -36,8 +39,8 @@ const PokemonCard = (props) => {
             break;
     }
 
-
     let imageURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonInfo.id}.png`
+    let speciesURL = `https://pokeapi.co/api/v2/pokemon-species/${props.id}/`
 
     const onClickHandler = () => {
         props.closePokemonInfo();
@@ -49,12 +52,24 @@ const PokemonCard = (props) => {
         .then(json => setPokemonInfo(json))
     }, [])
 
+    useEffect(() => {
+        if(Object.keys(pokemonInfo) !== 0){
+            fetch(speciesURL)
+            .then(response => response.json())
+            .then(json => setSpeciesInfo(json))
+        }else{
+            console.log("waiting")
+        }
+    }, [pokemonInfo])    
+
+
+
     return (
         <>
-            <div className='pokemoncard-generalcontainer'>
+            <div className={`pokemoncard-generalcontainer`}>
                 <button className="pokemoncard-back" onClick={onClickHandler}>go back</button>
                 
-                <div className='pokemoncard-container'>
+                <div className={`pokemoncard-container ${props.type}-pc`}>
                     <div className='pokemoncard-title'>
                         <Name url={props.url}/>
                         <div className='pokemoncard-type'>

@@ -1,5 +1,16 @@
+@font-face {
+    font-family: pokemon;
+    src: url(../../public/PokemonGb-RAeo.ttf);
+  }
+
 .about-container{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    height: 100%;
     color: black;
+    font-family: pokemon;
+    font-size: 0.75rem;
+    margin-left: 1rem;
 }
 
 .about{

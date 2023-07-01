@@ -39,7 +39,7 @@ const NameCard = (props) => {
 
 
     const cardStyle = `namecard-container ${mainType}`
-
+    
     /**
      * This is the url for the pokemons png image.
      */

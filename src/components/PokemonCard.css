@@ -50,5 +50,7 @@
         grid-row-end: 4;
         background-color: white;
         border-radius: 20px 20px 20px 20px ;
+        height: 100%;
+        grid-template-rows: 15% 85%;
     }
 }

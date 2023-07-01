@@ -15,18 +15,18 @@ const About =(props) => {
 
     return (
         <div className='about-container'>
-            <div className='about'>
+            
                 <p>Height:</p>
                 <p>{height}</p>
-            </div>
-            <div className='about'>
-                <p>Weight</p>
+           
+            
+                <p>Weight:</p>
                 <p>{weight}</p>
-            </div>
-            <div className='about'>
-                <p>Abilities</p>
+            
+            
+                <p>Abilities:</p>
                 <p>{abilitiesString}</p>
-            </div>
+            
         </div>
     )
 }
@@ -41,7 +41,7 @@ export default About;
 function convertWeight(w) {
     let kg = w / 10;
     let lbs = parseFloat(kg * 2.2).toFixed(1);
-    return `${lbs} lbs (${kg} kg)`
+    return `${lbs}lbs (${kg}kg)`
 }
 
 /**
@@ -57,7 +57,7 @@ function convertHeight(h) {
     let inches = footAndInches.toString().indexOf('.');
     let meters = parseFloat(temp / 100).toFixed(2);
 
-    return `${ft}'${inches}" (${meters} m)`;
+    return `${ft}'${inches}" (${meters}m)`;
 }
 
 /**

@@ -61,9 +61,11 @@ const NameCard = (props) => {
                     }
                 </div>
             </div>
-
-            <img className="pokemon-image" src={imageURL} alt="" />
-            <img className="pokeball-image" src={pokeball} alt="" />
+            <div className='namecard-imagecontainer'>
+                <img className="pokemon-image" src={imageURL} alt="" />
+                <img className="pokeball-image" src={pokeball} alt="" />
+            </div>
+            
         </div>
     );
 }

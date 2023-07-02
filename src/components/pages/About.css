@@ -1,54 +1,54 @@
 @font-face {
-    font-family: pokemon;
-    src: url(/PokemonGb-RAeo.ttf);
-  }
-
-.about-container{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 70% 30%;
-    height: 100%;
-    color: black;
-    font-size: 0.75rem;
+  font-family: pokemon;
+  src: url(/PokemonGb-RAeo.ttf);
 }
 
-
-.about-subsection{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-left: 20%;
-    color: #afb0b3;
+.about-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 70% 30%;
+  height: 100%;
+  color: black;
+  font-size: 0.75rem;
+  margin-left: 1rem;
 }
 
-.about-details{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-left: 1rem;
+.about-subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: 20%;
+  color: #afb0b3;
 }
 
-.about-breeding-title{
-    display: flex;
-    place-items: center;
-    margin-left: 1.5rem;
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: 1rem;
 }
 
-.about-breeding-details{
-    display: flex;
-    color: black;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    z-index: 50;
-    gap: 1rem;
-    place-items: center;
-    margin-left: 1rem;
-    font-weight: 700;
-    font-size: 0.8rem;
+.about-breeding-title {
+  display: flex;
+  place-items: center;
+  margin-left: 1.5rem;
+}
+
+.about-breeding-details {
+  display: flex;
+  color: black;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  z-index: 50;
+  gap: 1rem;
+  place-items: center;
+  margin-left: 1rem;
+  font-weight: 700;
+  font-size: 0.8rem;
 }

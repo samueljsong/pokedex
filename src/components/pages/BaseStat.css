@@ -1,46 +1,46 @@
-.bs-container{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 30% 10% 60%;
-    height: 100%;
-    color: black;
-    font-size: 0.75rem;
-    align-items: center;
+.bs-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 30% 10% 60%;
+  height: 100%;
+  color: black;
+  font-size: 0.75rem;
+  align-items: center;
+  margin-left: 1rem;
 }
 
-.bs-subsection{
-    display: flex;
-    flex-direction: column;
-    margin-left: 1.5rem;
-    font-weight: 700;
-    font-size: 0.8rem;
-    color: #afb0b3;
+.bs-subsection {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #afb0b3;
 }
 
-.bs-details{
-    display: flex;
-    flex-direction: column;
-    font-weight: 700;
-    font-size: 0.8rem;
+.bs-details {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
-.bs-statline{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 2.5rem;
+.bs-statline {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2.5rem;
 }
 
-.line{
-    height: 3px;
-    background-color: aqua;
+.line {
+  height: 3px;
+  background-color: aqua;
 }
 
-.red{
-    background-color: #ff6961;
+.red {
+  background-color: #ff6961;
 }
 
-.green{
-    background-color: #77dd77;
+.green {
+  background-color: #77dd77;
 }
-

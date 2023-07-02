@@ -7,7 +7,8 @@ import About from './pages/About';
 import BaseStat from './pages/BaseStat';
 import Evolution from './pages/Evolution';
 import Moves from './pages/Moves';
-import back from '/back.png'
+import back from '/back.png';
+import pokeball from '/pokeball2.png';
 
 
 const PokemonCard = (props) => {
@@ -85,16 +86,18 @@ const PokemonCard = (props) => {
                             <Type url ={props.url}></Type>    
                         </div>
                     </div>
-                    <img className='pokemoncard-img' src={imageURL} alt="" />
+                    <div className='pokemoncard-image-container'>
+                        <img className='pokemoncard-img' src={imageURL} alt="" />
+                        <img className='pokemoncard-pokeball-img' src={pokeball} alt="" />
+                    </div>
+                   
                     <div className='pokemoncard-details'>
                         <PokemonCardNav
                             aboutClick={onClickAboutHandler}
                             baseClick={onClickBaseHandler}
-                            evolutionClick={onClickEvolutionHandler}
                             movesClick={onClickMovesHandler}
                             statusAbout={about}
                             statusBase={base}
-                            statusEvolution={evolution}
                             statusMoves={moves}
                         />
                         {
@@ -108,9 +111,7 @@ const PokemonCard = (props) => {
                                         statInfo={pokemonInfo.stats}
                                 /> : null
                         }
-                        {
-                            evolution ? <Evolution/> : null
-                        }
+                    
                         {
                             moves ? <Moves /> : null
                         }

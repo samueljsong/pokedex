@@ -29,7 +29,6 @@ const About =(props) => {
                     <p>Height:</p>
                     <p>Weight:</p>
                     <p>Abilities:</p>
-                    <p>Happiness:</p>
                     <p>Capture Rate:</p>
                 </div>
 
@@ -38,7 +37,6 @@ const About =(props) => {
                     <p>{height}</p>
                     <p>{weight}</p>
                     <p>{abilitiesString}</p>
-                    <p>{props.speciesInfo.base_happiness}</p>
                     <p>{props.speciesInfo.capture_rate}</p>
                 </div>
 

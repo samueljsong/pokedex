@@ -1,6 +1,7 @@
 @media only screen and (max-width: 480px) {
     .pokemoncard-back{
-        position: absolute;
+        width: 2rem;
+        filter: invert(100);
     }
 
     .pokemoncard-generalcontainer{
@@ -12,9 +13,9 @@
     }
 
     .pokemoncard-container{
-        padding-top: 2rem;
+        padding-top: 1rem;
         display: grid;
-        height: 90vh;
+        height: 80vh;
         width: 100%;
         grid-template-rows: 10% 25% 65%;
         background-color: #505155;
@@ -23,16 +24,16 @@
     }    
 
     .pokemoncard-title{
-        padding-left: 2rem;
-    }
-
-    .pokemoncard-name{
-        line-height: 0;
-    }
-
-    .pokemoncard-type{
         display: flex;
-        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        
+    }
+
+    .pokemoncard-types{
+        display: flex;
+        gap: 0.2rem;
     }
 
     .pokemoncard-img{

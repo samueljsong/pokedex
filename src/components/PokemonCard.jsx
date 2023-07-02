@@ -7,6 +7,7 @@ import About from './pages/About';
 import BaseStat from './pages/BaseStat';
 import Evolution from './pages/Evolution';
 import Moves from './pages/Moves';
+import back from '/back.png'
 
 
 const PokemonCard = (props) => {
@@ -67,19 +68,20 @@ const PokemonCard = (props) => {
     return (
         <>
             <div className={`pokemoncard-generalcontainer`}>
-                <button className="pokemoncard-back" onClick={onClickHandler}>go back</button>
-                
                 <div className={`pokemoncard-container ${props.type}-pc`}>
                     <div className='pokemoncard-title'>
+                        <img className="pokemoncard-back" src={back} onClick={onClickHandler} alt="back" />
                         <Name url={props.url}/>
-                        <div className='pokemoncard-type'>
-                            <Type url ={props.url}></Type>
+                        <div className='pokemoncard-types'>
+                            <Type url ={props.url}></Type>    
                         </div>
                     </div>
                     <img className='pokemoncard-img' src={imageURL} alt="" />
                     <div className='pokemoncard-details'>
                         <PokemonCardNav></PokemonCardNav>
-                        {component}
+                        {
+                            about ? <About info={pokemonInfo} speciesInfo={speciesInfo} id={props.id}/> : null
+                        }
                     </div>
                 </div>
             </div>

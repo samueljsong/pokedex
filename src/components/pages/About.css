@@ -11,13 +11,8 @@
     height: 100%;
     color: black;
     font-size: 0.75rem;
-
 }
 
-.about{
-    display: flex;
-    gap: 2rem;
-}
 
 .about-subsection{
     display: flex;

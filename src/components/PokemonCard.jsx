@@ -7,6 +7,7 @@ import About from './pages/About';
 import BaseStat from './pages/BaseStat';
 import Evolution from './pages/Evolution';
 import Moves from './pages/Moves';
+import back from '/back.png'
 
 
 const PokemonCard = (props) => {
@@ -17,26 +18,35 @@ const PokemonCard = (props) => {
     /* State for navigation */
     const [about, setAbout] = useState(true);
     const [base, setBase] = useState(false);
-    const [evolution, setevolution] = useState(false);
+    const [evolution, setEvolution] = useState(false);
     const [moves, setMoves] = useState(false);
 
+    const onClickAboutHandler = () => {
+        setAbout(true);
+        setBase(false);
+        setEvolution(false);
+        setMoves(false);
+    }
 
-    let component
-    switch (window.location.pathname){
-        case "/":
-            break;
-        case "/about":
-            component = <About info={pokemonInfo} speciesInfo={speciesInfo} id={props.id}/>
-            break;
-        case "/basestat":
-            component = <BaseStat/>
-            break;
-        case "/evolution":
-            component = <Evolution/>
-            break;
-        case "/moves":
-            component = <Moves/>
-            break;
+    const onClickBaseHandler = () => {
+        setAbout(false);
+        setBase(true);
+        setEvolution(false);
+        setMoves(false);
+    }
+
+    const onClickEvolutionHandler = () => {
+        setAbout(false);
+        setBase(false);
+        setEvolution(true);
+        setMoves(false);
+    }
+
+    const onClickMovesHandler = () => {
+        setAbout(false);
+        setBase(false);
+        setEvolution(false);
+        setMoves(true);
     }
 
     let imageURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonInfo.id}.png`
@@ -67,19 +77,43 @@ const PokemonCard = (props) => {
     return (
         <>
             <div className={`pokemoncard-generalcontainer`}>
-                <button className="pokemoncard-back" onClick={onClickHandler}>go back</button>
-                
                 <div className={`pokemoncard-container ${props.type}-pc`}>
                     <div className='pokemoncard-title'>
+                        <img className="pokemoncard-back" src={back} onClick={onClickHandler} alt="back" />
                         <Name url={props.url}/>
-                        <div className='pokemoncard-type'>
-                            <Type url ={props.url}></Type>
+                        <div className='pokemoncard-types'>
+                            <Type url ={props.url}></Type>    
                         </div>
                     </div>
                     <img className='pokemoncard-img' src={imageURL} alt="" />
                     <div className='pokemoncard-details'>
-                        <PokemonCardNav></PokemonCardNav>
-                        {component}
+                        <PokemonCardNav
+                            aboutClick={onClickAboutHandler}
+                            baseClick={onClickBaseHandler}
+                            evolutionClick={onClickEvolutionHandler}
+                            movesClick={onClickMovesHandler}
+                            statusAbout={about}
+                            statusBase={base}
+                            statusEvolution={evolution}
+                            statusMoves={moves}
+                        />
+                        {
+                            about ? <About info={pokemonInfo} 
+                                        speciesInfo={speciesInfo} 
+                                        id={props.id}
+                                    /> : null
+                        }
+                        {
+                            base ? <BaseStat
+                                        statInfo={pokemonInfo.stats}
+                                /> : null
+                        }
+                        {
+                            evolution ? <Evolution/> : null
+                        }
+                        {
+                            moves ? <Moves /> : null
+                        }
                     </div>
                 </div>
             </div>

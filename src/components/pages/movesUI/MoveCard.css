@@ -1,0 +1,25 @@
+.mc-container{
+    width: 9rem;
+    height: 5rem;
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.7);
+    border: solid 1px white;
+    
+}
+
+.mc-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+}
+
+.mc-name{
+    text-align: center;
+    margin: 0;
+}
+
+.mc-img{
+    width: 1.5rem;
+    height: 1.5rem;
+}

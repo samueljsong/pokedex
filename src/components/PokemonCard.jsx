@@ -15,6 +15,7 @@ const PokemonCard = (props) => {
 
     const [pokemonInfo, setPokemonInfo] = useState({});
     const [speciesInfo, setSpeciesInfo] = useState({});
+    const [movesInfo, setMovesInfo] = useState([]);
 
     /* State for navigation */
     const [about, setAbout] = useState(true);
@@ -73,6 +74,16 @@ const PokemonCard = (props) => {
         }
     }, [pokemonInfo])    
 
+    useEffect(() => {
+        if(Object.keys(pokemonInfo) !== 0){
+            setMovesInfo(pokemonInfo.moves)
+        }else{
+            console.log("waiting")
+        }
+    }, [pokemonInfo])   
+    
+    
+
 
 
     return (
@@ -113,7 +124,9 @@ const PokemonCard = (props) => {
                         }
                     
                         {
-                            moves ? <Moves /> : null
+                            moves ? <Moves 
+                                        movesList={movesInfo}
+                            /> : null
                         }
                     </div>
                 </div>

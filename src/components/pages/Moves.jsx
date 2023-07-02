@@ -1,7 +1,19 @@
+import './Moves.css';
+import MoveCard from './movesUI/MoveCard';
 
-const Moves = () => {
+const Moves = (props) => {
     return (
-        <h1>moves</h1>
+        <div className='moves-container'>
+            {
+                props.movesList.map(move => {
+                    return <MoveCard
+                           name={move.move.name}
+                           moveUrl={move.move.url} 
+                           key={crypto.randomUUID()}
+                    />
+                })
+            }
+        </div>
     )
 }
 

@@ -1,0 +1,11 @@
+.moves-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    color: black;
+    gap: 1rem;
+    justify-content: center;
+    padding-top: 1rem;
+}

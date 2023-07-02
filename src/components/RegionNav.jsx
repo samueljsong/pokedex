@@ -1,5 +1,5 @@
 import './RegionNav.css'
-import pokeball from '../../public/pokeball2.png'
+import pokeball from '/pokeball2.png'
 
 const RegionNav = () => {
     return(

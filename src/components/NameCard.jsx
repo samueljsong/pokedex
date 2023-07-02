@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import './NameCard.css';
-import pokeball from '../../public/pokeball.png'
+import pokeball from '/pokeball.png'
 
 const NameCard = (props) => {
 

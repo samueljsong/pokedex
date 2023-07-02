@@ -1,15 +1,22 @@
 import './PokemonCardNav.css'
-import { Link } from 'react-router-dom';
 
 
 const PokemonCardNav = (props) => {
     return(
         <>
             <nav className="nav">
-                <div className='nav-element'><h4 className='active'>About</h4></div>
-                <div className='nav-element'><h4>Base Stats</h4></div>
-                <div className='nav-element'><h4>Evolution</h4></div>
-                <div className='nav-element'><h4>Moves</h4></div>
+                <div className='nav-element' onClick={props.aboutClick}>
+                    <h4 className={`${props.statusAbout}`}>About</h4>
+                </div>
+                <div className='nav-element' onClick={props.baseClick}>
+                    <h4 className={`${props.statusBase}`}>Base Stats</h4>
+                </div>
+                <div className='nav-element' onClick={props.evolutionClick}>
+                    <h4 className={`${props.statusEvolution}`}>Evolution</h4>
+                </div>
+                <div className='nav-element' onClick={props.movesClick}>
+                    <h4 className={`${props.statusMoves}`}>Moves</h4>
+                </div>
             </nav>
         </>
     );

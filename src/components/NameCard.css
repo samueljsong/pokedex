@@ -7,16 +7,22 @@
   .namecard-container {
     height: 6.5rem;
     width: 10rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.7);
     border: solid 1px white;
   }
 
+  .namecard-details{
+    display: flex;
+    margin-top: 0.2rem;
+
+  }
+
   .namecard-imagecontainer{
-    position: absolute;
-    margin-left: 5rem;
-    margin-top: 1.6rem;
+    display: flex;
+    place-items: center;
   }
 
   .pokemon-image {
@@ -30,27 +36,24 @@
     width: 4rem;
     position: absolute;
   }
-  .namecard-information {
-    display: flex;
-    flex-direction: column;
-
-  }
+  
   .namecard-name {
-    line-height: 1;
     /* font-family: pokemon; */
     z-index: 6;
     text-align: center;
-    margin-top: 0.7rem;
-    text-wrap: balance;
+    margin: 0;
+    margin-top: 0.4rem;
+
   }
   .type-container {
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-left: 0.5rem;
     line-height: 0;
     font-size: 0.8rem;
     display: flex;
     gap: 0.2rem;
-    position: absolute;
+    width: 45%;
+
   }
   .grass {
     background-image: linear-gradient(#65bd65, white);

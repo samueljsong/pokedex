@@ -49,21 +49,23 @@ const NameCard = (props) => {
 
     return(
         <div className={cardStyle} onClick={onClickHandler} >
-            <div className='namecard-information'>
-                <h4 className='namecard-name'>
-                    {props.name.charAt(0).toUpperCase() + props.name.slice(1)}
-                </h4>
+            
+            <h4 className='namecard-name'>
+                {props.name.charAt(0).toUpperCase() + props.name.slice(1)}
+            </h4>
+           
+            <div className='namecard-details'>
                 <div className='type-container'>
-                    {
-                        types.map(slot => {
-                            return <img className="type-img" key={crypto.randomUUID()} src={`/${slot.type.name}.png`}></img>
-                        })
-                    }
+                        {
+                            types.map(slot => {
+                                return <img className="type-img" key={crypto.randomUUID()} src={`/${slot.type.name}.png`}></img>
+                            })
+                        }
+                    </div>
+                <div className='namecard-imagecontainer'>
+                    <img className="pokemon-image" src={imageURL} alt="" />
+                    <img className="pokeball-image" src={pokeball} alt="" />
                 </div>
-            </div>
-            <div className='namecard-imagecontainer'>
-                <img className="pokemon-image" src={imageURL} alt="" />
-                <img className="pokeball-image" src={pokeball} alt="" />
             </div>
             
         </div>

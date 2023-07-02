@@ -46,6 +46,7 @@
         z-index: 3;
     }
     .pokemoncard-details{
+        margin-top: 1rem;
         display: grid;
         grid-row-start: 3;
         grid-row-end: 4;

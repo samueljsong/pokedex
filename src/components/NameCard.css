@@ -90,7 +90,7 @@
 
   }
   .flying{
-    background-image: linear-gradient(#e8e8e8, white);
+    background-image: linear-gradient(#b8b5b5, white);
 
   }
   .ghost{
@@ -106,7 +106,7 @@
 
   }
   .normal{
-    background-image: linear-gradient(#929289, white);
+    background-image: linear-gradient(#979794, white);
 
   }
   .poison{
@@ -114,7 +114,7 @@
 
   }
   .psychic{
-    background-image: linear-gradient(#FFB3C6, white);
+    background-image: linear-gradient(#faa0b7, white);
 
   }
   .rock{

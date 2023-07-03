@@ -5,7 +5,6 @@ import Type from './cardUI/Type';
 import PokemonCardNav from './PokemonCardNav';
 import About from './pages/About';
 import BaseStat from './pages/BaseStat';
-import Evolution from './pages/Evolution';
 import Moves from './pages/Moves';
 import back from '/back.png';
 import pokeball from '/pokeball2.png';
